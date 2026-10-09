@@ -1,0 +1,21 @@
+
+1 Introduction
+2 Version Information
+3 Translations of Objectives
+4 Objectives
+4.1 Topic 361: High Availability Cluster Management
+4.1.1 361.1 High Availability Concepts and Theory (weight: 6)
+4.1.2 361.2 Load Balanced Clusters (weight: 8)
+4.1.3 361.3 Failover Clusters (weight: 8)
+4.2 Topic 362: High Availability Cluster Storage
+4.2.1 362.1 DRBD (weight: 6)
+4.2.2 362.2 Cluster Storage Access (weight: 3)
+4.2.3 362.3 Clustered File Systems (weight: 4)
+4.3 Topic 363: High Availability Distributed Storage
+4.3.1 363.1 GlusterFS Storage Clusters (weight: 5)
+4.3.2 363.2 Ceph Storage Clusters (weight: 8)
+4.4 Topic 364: Single Node High Availability
+4.4.1 364.1 Hardware and Resource High Availability (weight: 2)
+4.4.2 364.2 Advanced RAID (weight: 2)
+4.4.3 364.3 Advanced LVM (weight: 3)
+4.4.4 364.4 Network High Availability (weight: 5)

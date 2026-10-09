@@ -1,0 +1,61 @@
+1 Introduction
+2 Version Information
+3 Exams
+4 Addenda
+5 Translations of Objectives
+6 Objectives: Exam 101
+6.1 Topic 101: System Architecture
+6.1.1 101.1 Determine and configure hardware settings
+6.1.2 101.2 Boot the system
+6.1.3 101.3 Change runlevels / boot targets and shutdown or reboot system
+6.2 Topic 102: Linux Installation and Package Management
+6.2.1 102.1 Design hard disk layout
+6.2.2 102.2 Install a boot manager
+6.2.3 102.3 Manage shared libraries
+6.2.4 102.4 Use Debian package management
+6.2.5 102.5 Use RPM and YUM package management
+6.2.6 102.6 Linux as a virtualization guest
+6.3 Topic 103: GNU and Unix Commands
+6.3.1 103.1 Work on the command line
+6.3.2 103.2 Process text streams using filters
+6.3.3 103.3 Perform basic file management
+6.3.4 103.4 Use streams, pipes and redirects
+6.3.5 103.5 Create, monitor and kill processes
+6.3.6 103.6 Modify process execution priorities
+6.3.7 103.7 Search text files using regular expressions
+6.3.8 103.8 Basic file editing
+6.4 Topic 104: Devices, Linux Filesystems, Filesystem Hierarchy Standard
+6.4.1 104.1 Create partitions and filesystems
+6.4.2 104.2 Maintain the integrity of filesystems
+6.4.3 104.3 Control mounting and unmounting of filesystems
+6.4.4 104.4 Removed
+6.4.5 104.5 Manage file permissions and ownership
+6.4.6 104.6 Create and change hard and symbolic links
+6.4.7 104.7 Find system files and place files in the correct location
+7 Objectives: Exam 102
+7.1 Topic 105: Shells and Shell Scripting
+7.1.1 105.1 Customize and use the shell environment
+7.1.2 105.2 Customize or write simple scripts
+7.2 Topic 106: User Interfaces and Desktops
+7.2.1 106.1 Install and configure X11
+7.2.2 106.2 Graphical Desktops
+7.2.3 106.3 Accessibility
+7.3 Topic 107: Administrative Tasks
+7.3.1 107.1 Manage user and group accounts and related system files
+7.3.2 107.2 Automate system administration tasks by scheduling jobs
+7.3.3 107.3 Localisation and internationalisation
+7.4 Topic 108: Essential System Services
+7.4.1 108.1 Maintain system time
+7.4.2 108.2 System logging
+7.4.3 108.3 Mail Transfer Agent (MTA) basics
+7.4.4 108.4 Manage printers and printing
+7.5 Topic 109: Networking Fundamentals
+7.5.1 109.1 Fundamentals of internet protocols
+7.5.2 109.2 Persistent network configuration
+7.5.3 109.3 Basic network troubleshooting
+7.5.4 109.4 Configure client side DNS
+7.6 Topic 110: Security
+7.6.1 110.1 Perform security administration tasks
+7.6.2 110.2 Setup host security
+7.6.3 110.3 Securing data with encryption
+8 Future Change Considerations

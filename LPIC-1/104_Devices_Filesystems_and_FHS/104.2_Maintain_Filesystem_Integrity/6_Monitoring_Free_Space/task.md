@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)
 
 
 **Практическая работа №1: Базовый мониторинг дискового пространства**
@@ -117,4 +117,4 @@ echo "Освобождено: $(df -h / | awk 'NR==2 {print $4}')"  # 6. Отч�
 `truncate -s 0` обнуляет файл (альтернатива: `> file.log`).             
 `2>/dev/null` скрывает ошибки доступа.       
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)

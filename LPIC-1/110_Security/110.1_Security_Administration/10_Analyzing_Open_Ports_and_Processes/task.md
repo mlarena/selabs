@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)
 
 **Практическая работа №1: Базовый анализ открытых портов**
 
@@ -116,4 +116,4 @@ diff /tmp/previous_ports.txt /tmp/current_ports.txt  # 6. Сравнение с 
 Сравнение `diff` показывает изменения в открытых портах.        
 
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)

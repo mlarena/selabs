@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)
 
 
 **Практическая работа №1: Базовый поиск файлов**
@@ -154,4 +154,4 @@ find /etc -type f -mmin -60 2>/dev/null
 `! -exec test -e` находит несуществующие цели симлинков.      
 Мониторинг по времени (`-mmin -60` — изменения за последний час) полезен для безопасности.         
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)

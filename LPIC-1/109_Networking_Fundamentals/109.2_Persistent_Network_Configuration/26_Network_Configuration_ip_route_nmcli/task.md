@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)     
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)     
 
 **Практическая работа №1: Ручная настройка сети через iproute2**     
 
@@ -115,4 +115,4 @@ sudo systemctl restart NetworkManager  # 6. Перезапуск сетевог�
 При проблемах с DHCP используйте `dhclient` для получения нового адреса.     
 
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)     
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)     

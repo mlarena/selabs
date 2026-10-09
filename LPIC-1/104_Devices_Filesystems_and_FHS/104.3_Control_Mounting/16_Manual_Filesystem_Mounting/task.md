@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)
 
 **Практическая работа №1: Базовое монтирование и размонтирование**     
 
@@ -117,4 +117,4 @@ ls /mnt/share                               # 5. Проверка содержи
 Сетевые ФС зависят от сети, используйте `_netdev` в опциях fstab для правильного порядка загрузки.     
 
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)

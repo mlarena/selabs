@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)
 
 **Практическая работа №1: Мониторинг обращений к портам через журналы**     
 
@@ -127,4 +127,4 @@ find /var/log -name "syslog.*" -mtime +7 -exec gzip {} \;
 `find -mtime +7` находит файлы старше 7 дней.       
 Регулярные отчеты улучшают безопасность.
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)

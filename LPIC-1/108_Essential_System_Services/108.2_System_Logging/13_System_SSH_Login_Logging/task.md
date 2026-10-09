@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)
 
 **Практическая работа №1: Базовый мониторинг SSH входов**     
 
@@ -130,4 +130,4 @@ find /var/log -name "auth.log.*" -mtime +30 -exec gzip {} \;
 `find -mtime +30` находит файлы старше 30 дней.      
 Cron запускает скрипт ежедневно в 2:00. Регулярный мониторинг повышает безопасность.     
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)

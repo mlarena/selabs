@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)     
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)     
 
 **Практическая работа №1: Установка и базовая настройка SELinux**     
 
@@ -120,4 +120,4 @@ getenforce  # Проверка после перезагрузки
 MLS (Multi-Level Security) добавляет уровни безопасности (например, секретность).       
 Требует перезагрузки для применения.      
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)     
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)     

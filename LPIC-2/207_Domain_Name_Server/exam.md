@@ -1,4 +1,4 @@
-[Оглавление](?file=LPIC-2%2Fhome.md)
+[Оглавление](LPIC-2/home.md)
 
 # Экзаменационные боевые задачи — Тема 207: Domain Name Server
 

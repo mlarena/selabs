@@ -1,4 +1,4 @@
-[Оглавление](?file=LPIC-1%2Fhome.md)
+[Оглавление](LPIC-1/home.md)
 
 # Экзаменационные боевые задачи — Тема 108: Essential System Services
 

@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)       
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)       
 
 **Практическая работа №1: Основные команды навигации**
 
@@ -123,4 +123,4 @@ tar -xzf logs.tar.gz -C ~/archive_lab/arh_lab
 `rm *.log` удаляет файлы по маске.       
 `tar -tzf` выводит список файлов в архиве без распаковки.      
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)      
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)      

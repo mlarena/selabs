@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md) 
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md) 
 
 
 **Практическая работа №1: Базовое архивирование и сжатие (tar, gzip)**     
@@ -116,4 +116,4 @@ find "$BACKUP_DIR" -name "backup_*.tar.gz" -mtime +7 -delete >> $LOG
 ```
 **Пояснения:** Скрипт создает датированные архивы. `2>> $LOG` перенаправляет ошибки в лог. Проверка `$?` определяет успешность операции. `find -mtime +7` находит файлы старше 7 дней. Cron-задание запускает скрипт ежедневно в 2:00. Логирование и уведомления помогают мониторить процесс.
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md) 
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md) 

@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)    
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)    
 
 
 **Практическая работа №1: Базовые алиасы в сессии**
@@ -115,4 +115,4 @@ cp ~/.bashrc ~/.bashrc.backup.$(date +%Y%m%d)        # 6. Резервная к�
 `\command` игнорирует алиасы. Резервные копии конфигов — хорошая практика.       
 
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)      
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)      

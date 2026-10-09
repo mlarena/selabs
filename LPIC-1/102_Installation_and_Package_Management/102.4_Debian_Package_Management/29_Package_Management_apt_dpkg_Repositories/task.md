@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)     
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)     
 
 **Практическая работа №1: Базовое управление пакетами через apt**      
 
@@ -112,4 +112,4 @@ sudo apt autoclean                 # Удаление устаревших па�
 `apt clean` удаляет все скачанные .deb файлы,        
 `autoclean` удаляет только те, которые больше недоступны в репозиториях.
        
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)     
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)     

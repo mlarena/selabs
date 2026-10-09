@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)      
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)      
 **Практическая работа №1: Базовое добавление записи в fstab**      
 
 **Задание:**      
@@ -141,4 +141,4 @@ Recovery mode позволяет исправить это.
 Всегда проверяйте fstab командой `mount -a` перед перезагрузкой.       
 Скрипт проверки можно добавить в cron для регулярного мониторинга.      
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)      
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)      

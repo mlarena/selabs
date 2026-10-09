@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)
 
 
 **Практическая работа №1: Базовые операции с awk**      
@@ -140,4 +140,4 @@ END {print "Обработано строк:", count}
 **Пояснения:** `ps aux` показывает процессы: поле 6 — RSS (память) в KB. Деление на 1024 переводит в MB. Awk может быть интерпретатором скрипта (шебанг `#!/usr/bin/awk -f`). Комбинирование с `sort` и `head` дает гибкость в анализе.
 
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)

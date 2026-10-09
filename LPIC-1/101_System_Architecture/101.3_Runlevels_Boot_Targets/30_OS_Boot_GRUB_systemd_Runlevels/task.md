@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)     
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)     
 
 **Практическая работа №1: Работа с уровнями выполнения (runlevels/targets)**
 
@@ -116,4 +116,4 @@ Live-носитель позволяет восстановить систему
 Проверка `/boot/` на наличие `vmlinuz` (ядро) и `initrd.img` (initramfs).        
 Важно правильно указать устройства в `/etc/fstab`.       
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)     
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)     

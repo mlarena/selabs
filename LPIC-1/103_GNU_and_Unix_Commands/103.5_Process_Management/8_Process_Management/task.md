@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)
 
 
 **Практическая работа №1: Базовое управление процессами**
@@ -118,4 +118,4 @@ pkill -<SIGNAL> -g <PGID>         # 6. Отправка сигнала груп�
 `pkill` работает с группами через `-g`.           
 Управление группами полезно для завершения связанных процессов.    
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)

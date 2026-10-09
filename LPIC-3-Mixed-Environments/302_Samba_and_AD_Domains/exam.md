@@ -1,4 +1,4 @@
-[Оглавление](?file=LPIC-3-Mixed-Environments%2Fhome.md)
+[Оглавление](LPIC-3-Mixed-Environments/home.md)
 
 # Экзаменационные боевые задачи — Тема 302: Samba and Active Directory Domains
 

@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)      
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)      
 
 **Практическая работа №1: Базовые права доступа (chmod)**      
 
@@ -111,4 +111,4 @@ Umask вычитается из максимальных прав (666 для ф
 Umask 027 → файл: 666-027=640 (rw-r-----), каталог: 777-027=750 (rwxr-x---). 
 Явное использование `chmod` переопределяет маску.      
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)

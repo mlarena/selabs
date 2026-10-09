@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)
 
 **Практическая работа №1: Создание и проверка файловых систем (mkfs, fsck)**
 
@@ -113,4 +113,4 @@ sudo tune2fs -O ^has_journal /dev/sdb1 # 6. Отключить журнал (д�
 Изменения `tune2fs` применяются сразу, кроме некоторых параметров, требующих размонтирования.     
 
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)

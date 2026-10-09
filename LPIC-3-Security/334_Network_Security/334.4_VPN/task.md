@@ -1,4 +1,4 @@
-[Оглавление](?file=LPIC-3-Security%2Fhome.md)
+[Оглавление](LPIC-3-Security/home.md)
 
 **Практическая работа №1: Основы VPN и IPsec**
 

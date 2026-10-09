@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)     
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)     
 
 **Практическая работа №1: Базовое использование lsof**    
 
@@ -110,4 +110,4 @@ sudo lsof -i -P -n | grep -v "ESTABLISHED\|LISTEN"
 Скрипты помогают автоматизировать мониторинг.
 
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)     
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)     

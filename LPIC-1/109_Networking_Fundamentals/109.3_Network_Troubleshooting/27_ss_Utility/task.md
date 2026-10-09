@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)     
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)     
 
 **Практическая работа №1: Базовое использование ss**    
 
@@ -117,4 +117,4 @@ done
 `-i` показывает статистику по интерфейсам.     
 Скрипт мониторинга может детектировать подозрительную активность на SSH порту.    
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)     
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)     

@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)
 
 **Практическая работа №1: Мониторинг ресурсов системных служб**      
 
@@ -123,4 +123,4 @@ Cron: `0 * * * * /path/to/service_monitor.sh >> /var/log/service_monitor.log`.
 Логирование помогает отслеживать проблемы.      
 
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)

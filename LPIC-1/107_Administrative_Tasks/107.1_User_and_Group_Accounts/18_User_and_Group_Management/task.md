@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)
 
 **Практическая работа №1: Создание и настройка пользователей**
 
@@ -121,4 +121,4 @@ sudo grep ":*:" /etc/shadow | awk -F: '$2 == "" {print $1}'
 `groups` и `id` показывают членство в группах.     
 Скрипт аудита помогает находить потенциальные уязвимости безопасности, например, лишние пользователи с UID 0.    
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)

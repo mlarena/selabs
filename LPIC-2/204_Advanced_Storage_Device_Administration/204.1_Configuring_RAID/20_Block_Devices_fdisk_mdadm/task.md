@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)
 
 **Практическая работа №1: Работа с fdisk - создание разделов**      
 
@@ -121,4 +121,4 @@ sudo wipefs -a /dev/sdb              # 6. Очистить весь диск (и
 Эти операции уничтожают данные. 
 Перед удалением убедитесь, что нужные данные сохранены и вы работаете с правильными устройствами.      
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blob?file=home.md)
+[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)

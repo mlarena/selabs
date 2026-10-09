@@ -1,4 +1,4 @@
-[Оглавление](?file=LPIC-3-Mixed-Environments%2Fhome.md)
+[Оглавление](LPIC-3-Mixed-Environments/home.md)
 
 **Практическая работа №1: Присоединение Linux к AD (member server)**
 

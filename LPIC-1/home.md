@@ -10,8 +10,7 @@
 ### Тема 101: System Architecture
 
 - **101.1 Determine and configure hardware settings**
-  - [Практические работы](LPIC-1/101_System_Architecture/101.1_Hardware_Settings/24_Getting_System_Information/task.md)
-  (LPIC-1/101_System_Architecture/101.1_Hardware_Settings/24_Getting_System_Information/task.md)
+  - [Практические работы](LPIC-1/101_System_Architecture/101.1_Hardware_Settings/24_Getting_System_Information/task.md)  
 - **101.2 Boot the system**
   - [Практические работы](LPIC-1/101_System_Architecture/101.2_Boot_the_System/32_Boot_and_Shutdown_Process/task.md)
   - [Практические работы](LPIC-1/101_System_Architecture/101.2_Boot_the_System/41_Load_OS/task.md)

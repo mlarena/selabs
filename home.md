@@ -13,7 +13,7 @@
 
 ## Документация проекта
 
-- [О проекте и как учиться](?file=README.md)
+- [О проекте и как учиться](README.md)
 - [Карта соответствия целям LPI](?file=docs%2Flpi-map.md)
 - [План развития (roadmap)](?file=docs%2Froadmap.md)
 - [Формат экзаменов LPI](?file=docs%2Fexam-format.md)

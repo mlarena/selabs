@@ -5,7 +5,7 @@ def search_and_replace_fragment():
     Ищет и заменяет фрагмент в именах файлов и директорий
     """
     # НАСТРОЙКИ (измените здесь нужные значения)
-    old_fragment = "1_task_jun"      # Что ищем
+    old_fragment = "task"      # Что ищем
     new_fragment = "task"     # На что заменяем
     root_dir = '.'                  # Текущая папка
     

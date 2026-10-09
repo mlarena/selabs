@@ -1,0 +1,316 @@
+Отличный вопрос! Это важный аспект понимания того, как systemd управляет монтированием файловых систем.
+
+## Ответ
+
+Юнит-файл монтирования для каталога `/opt/repo/1.7` будет иметь имя:
+
+**`opt-repo-1.7.mount`**
+
+## Правило формирования имени
+
+Systemd преобразует путь монтирования в имя юнит-файла по следующему алгоритму:
+
+1. Удаляется ведущий слэш (`/`)
+2. Все остальные слэши (`/`) заменяются на дефисы (`-`)
+3. Добавляется суффикс `.mount`
+
+### Подробный разбор для `/opt/repo/1.7`:
+- Исходный путь: `/opt/repo/1.7`
+- Убираем `/` в начале: `opt/repo/1.7`
+- Заменяем `/` на `-`: `opt-repo-1.7`
+- Добавляем `.mount`: **`opt-repo-1.7.mount`**
+
+## Почему именно так?
+
+Systemd использует этот подход для создания уникальных и предсказуемых имён юнитов. Экранирование (escaping) специальных символов позволяет:
+- Избежать конфликтов имён
+- Обеспечить обратную совместимость с командной строкой
+- Сделать имена юнитов допустимыми в файловой системе
+
+## Важные нюансы
+
+1. **Для корневого каталога** `/` используется специальное имя `-.mount`
+
+2. **Если путь содержит дефисы**, они экранируются обратным слэшем:
+   - Например, путь `/opt/my-data` превратится в `opt-my\x2ddata.mount`
+   - Дефис в исходном пути заменяется на `\x2d` (hex-код дефиса)
+
+3. **Юнит-файл должен находиться** в одном из стандартных каталогов systemd:
+   - `/etc/systemd/system/` (для локальных настроек)
+   - `/lib/systemd/system/` (для пакетов)
+   - `/run/systemd/system/` (для временных юнитов)
+
+---
+
+# Лабораторная работа: "Создание и управление .mount юнитами в systemd"
+
+## Цель работы
+Научиться создавать, настраивать и управлять точками монтирования через systemd, понимая правила именования юнитов.
+
+## Подготовка
+
+### Шаг 1: Создание тестового блочного устройства
+Для безопасного эксперимента создадим виртуальный диск:
+
+```bash
+# Создаём файл-образ размером 512 МБ
+dd if=/dev/zero of=~/test_disk.img bs=1M count=512
+
+# Создаём файловую систему ext4 на образе
+mkfs.ext4 ~/test_disk.img
+
+# Создаём целевую директорию монтирования
+sudo mkdir -p /opt/repo/1.7
+
+# Проверяем, что директория пуста
+ls -la /opt/repo/1.7/
+```
+
+## Создание .mount юнита
+
+### Шаг 2: Создание юнит-файла монтирования
+
+```bash
+# Создаём юнит-файл с правильным именем
+sudo nano /etc/systemd/system/opt-repo-1.7.mount
+```
+
+Добавьте следующее содержимое:
+
+```ini
+[Unit]
+Description=Test mount for /opt/repo/1.7
+After=local-fs.target
+
+[Mount]
+What=/home/${USER}/test_disk.img
+Where=/opt/repo/1.7
+Type=ext4
+Options=defaults,noatime
+
+[Install]
+WantedBy=multi-user.target
+```
+
+**Пояснение параметров:**
+- `What` — что монтируем (устройство или файл-образ)
+- `Where` — куда монтируем (должно совпадать с именем юнита)
+- `Type` — тип файловой системы
+- `Options` — опции монтирования
+- `After` — зависимость от целевого юнита
+- `WantedBy` — в какой target включать юнит
+
+### Шаг 3: Проверка и активация юнита
+
+```bash
+# Проверяем корректность юнит-файла
+sudo systemd-analyze verify /etc/systemd/system/opt-repo-1.7.mount
+
+# Перечитываем конфигурацию systemd
+sudo systemctl daemon-reload
+
+# Проверяем, что systemd видит наш юнит
+systemctl list-units --all | grep mount | grep opt
+# или более конкретно:
+systemctl status opt-repo-1.7.mount
+```
+
+### Шаг 4: Монтирование и проверка
+
+```bash
+# Активируем точку монтирования
+sudo systemctl start opt-repo-1.7.mount
+
+# Проверяем статус
+sudo systemctl status opt-repo-1.7.mount
+
+# Проверяем, что диск действительно примонтирован
+mount | grep /opt/repo/1.7
+df -h | grep /opt/repo/1.7
+lsblk | grep -A5 loop
+
+# Создаём тестовый файл на примонтированном разделе
+echo "Тестовые данные" | sudo tee /opt/repo/1.7/test.txt
+sudo cat /opt/repo/1.7/test.txt
+```
+
+### Шаг 5: Автоматическое монтирование при загрузке
+
+```bash
+# Включаем юнит для автозагрузки
+sudo systemctl enable opt-repo-1.7.mount
+
+# Проверяем, что симлинк создался
+ls -la /etc/systemd/system/multi-user.target.wants/ | grep opt-repo
+```
+
+### Шаг 6: Размонтирование и отключение
+
+```bash
+# Останавливаем монтирование
+sudo systemctl stop opt-repo-1.7.mount
+
+# Проверяем, что диск отмонтирован
+mount | grep /opt/repo/1.7 || echo "Не примонтировано"
+
+# Отключаем автозагрузку
+sudo systemctl disable opt-repo-1.7.mount
+
+# Проверяем, что симлинк удалился
+ls -la /etc/systemd/system/multi-user.target.wants/ | grep opt-repo || echo "Симлинк удалён"
+```
+
+## Работа с автоматическим монтированием (.automount)
+
+Systemd также поддерживает `.automount` юниты для монтирования по требованию.
+
+### Шаг 7: Создание .automount юнита
+
+```bash
+# Создаём .automount юнит
+sudo nano /etc/systemd/system/opt-repo-1.7.automount
+```
+
+Добавьте содержимое:
+
+```ini
+[Unit]
+Description=Automount for /opt/repo/1.7
+
+[Automount]
+Where=/opt/repo/1.7
+TimeoutIdleSec=60
+
+[Install]
+WantedBy=multi-user.target
+```
+
+### Шаг 8: Активация автомонтирования
+
+```bash
+# Перечитываем конфигурацию
+sudo systemctl daemon-reload
+
+# Включаем .automount юнит (он автоматически запустит и .mount при обращении)
+sudo systemctl enable --now opt-repo-1.7.automount
+
+# Проверяем статус
+systemctl status opt-repo-1.7.automount
+
+# Проверяем, что диск ещё не примонтирован
+mount | grep /opt/repo/1.7 || echo "Диск не примонтирован (ждёт обращения)"
+
+# Обращаемся к директории (это вызовет монтирование)
+ls -la /opt/repo/1.7/
+
+# Проверяем, что теперь диск примонтирован
+mount | grep /opt/repo/1.7
+df -h | grep /opt/repo/1.7
+```
+
+### Шаг 9: Наблюдение за автоматическим размонтированием
+
+```bash
+# Ждём 60 секунд (TimeoutIdleSec=60)
+sleep 70
+
+# Проверяем, что диск отмонтировался автоматически
+mount | grep /opt/repo/1.7 || echo "Диск автоматически отмонтирован"
+```
+
+## Дополнительные эксперименты
+
+### Эксперимент 1: Обработка путей с дефисами
+
+```bash
+# Создаём директорию с дефисом в имени
+sudo mkdir -p /opt/my-data
+
+# Создаём юнит для пути с дефисом
+sudo nano /etc/systemd/system/opt-my\x2ddata.mount
+```
+
+Содержимое:
+```ini
+[Unit]
+Description=Mount with hyphen in path
+
+[Mount]
+What=/home/${USER}/test_disk.img
+Where=/opt/my-data
+Type=ext4
+Options=defaults
+```
+
+### Эксперимент 2: Сравнение с fstab
+
+Systemd также читает `/etc/fstab` и создаёт .mount юниты на его основе:
+
+```bash
+# Добавляем запись в fstab
+echo "/home/${USER}/test_disk.img /opt/repo/1.7 ext4 defaults,noatime 0 0" | sudo tee -a /etc/fstab
+
+# Systemd автоматически сгенерирует .mount юнит из fstab
+sudo systemctl daemon-reload
+
+# Проверяем сгенерированный юнит
+systemctl list-units --all | grep opt-repo
+
+# Проверяем, что systemd видит запись
+systemctl show opt-repo-1.7.mount | grep -E "FragmentPath|SourcePath"
+
+# Удаляем запись из fstab
+sudo sed -i '$d' /etc/fstab
+```
+
+## Очистка
+
+```bash
+# Останавливаем и отключаем все юниты
+sudo systemctl stop opt-repo-1.7.mount opt-repo-1.7.automount 2>/dev/null
+sudo systemctl disable opt-repo-1.7.mount opt-repo-1.7.automount 2>/dev/null
+
+# Удаляем юнит-файлы
+sudo rm -f /etc/systemd/system/opt-repo-1.7.*
+sudo rm -f /etc/systemd/system/opt-my\x2ddata.mount
+
+# Перечитываем конфигурацию
+sudo systemctl daemon-reload
+
+# Удаляем тестовую директорию и образ
+sudo rmdir /opt/repo/1.7 /opt/repo 2>/dev/null
+rm ~/test_disk.img
+```
+
+## Выводы
+
+В ходе лабораторной работы вы:
+
+1. **Изучили правила именования** `.mount` юнитов в systemd:
+   - Преобразование `/opt/repo/1.7` → `opt-repo-1.7.mount`
+   - Экранирование специальных символов (дефисы → `\x2d`)
+
+2. **Создали и настроили** собственный `.mount` юнит
+
+3. **Управляли точкой монтирования** через systemd команды:
+   - `start`, `stop`, `enable`, `disable`, `status`
+
+4. **Познакомились с `.automount` юнитами** для монтирования по требованию
+
+5. **Увидели взаимосвязь** между `/etc/fstab` и systemd юнитами
+
+## Ключевые команды для запоминания
+
+```bash
+# Проверка имени юнита для любого пути
+systemd-escape -p --suffix=mount "/opt/repo/1.7"
+
+# Просмотр всех активных точек монтирования в systemd
+systemctl list-units --type=mount
+
+# Проверка конкретного юнита
+systemctl status opt-repo-1.7.mount
+
+# Анализ зависимостей
+systemctl list-dependencies opt-repo-1.7.mount
+```

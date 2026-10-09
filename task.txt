@@ -1,0 +1,16 @@
+Это проект материалов подготовки к экзаменам Linux Professional Institute (LPI)
+есть обновленный список тем
+C:\_selabs\selabs\info\LPIC-1 Exam 101 and 102 Objectives.txt
+C:\_selabs\selabs\info\LPIC-2 Exam 201 and 202 Objectives.txt
+C:\_selabs\selabs\info\LPIC-3 High Availability and Storage Clusters Exam 306 Objectives.txt
+C:\_selabs\selabs\info\LPIC-3 Mixed Environments Exam 300 Objectives.txt
+C:\_selabs\selabs\info\LPIC-3 Security Exam 303 Objectives.txt
+C:\_selabs\selabs\info\LPIC-3 Virtualization and Containerization Exam 305 Objectives.txt
+
+сделать анализ всех файлов.
+необходимо актуализировать каталоги и задачи.
+проверить задачи.
+добавить недостающие экзамены, темы и задачи.
+сейчас везде по 4 набора, необходимо 5 наборов задачь.
+сделать ссылки на зачачи и навигацию правильной. 
+навигацию сделать с учеом того что это все хоститься на https://github.com/mlarena/selabs/

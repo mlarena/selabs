@@ -6,10 +6,10 @@
 
 | Уровень | Экзамены | Описание |
 | --- | --- | --- |
-| [LPIC-1 — Linux Administrator](?file=LPIC-1%2Fhome.md) | 101-500, 102-500 | Базовое администрирование, командная строка, установка и настройка |
-| [LPIC-2 — Linux Engineer](?file=LPIC-2%2Fhome.md) | 201-450, 202-450 | Администрирование сетей малого/среднего размера, сервисы |
-| [LPIC-3 Mixed Environments](?file=LPIC-3-Mixed-Environments%2Fhome.md) | 300-300 | Enterprise-администрирование в смешанных средах (Samba, AD, FreeIPA) |
-| [LPIC-3 Security](?file=LPIC-3-Security%2Fhome.md) | 303-300 | Enterprise-безопасность (криптография, MAC, сети, аудит) |
+| [LPIC-1 — Linux Administrator](LPIC-1/home.md) | 101-500, 102-500 | Базовое администрирование, командная строка, установка и настройка |
+| [LPIC-2 — Linux Engineer](LPIC-2/Fhome.md) | 201-450, 202-450 | Администрирование сетей малого/среднего размера, сервисы |
+| [LPIC-3 Mixed Environments](LPIC-3-Mixed-Environments/ome.md) | 300-300 | Enterprise-администрирование в смешанных средах (Samba, AD, FreeIPA) |
+| [LPIC-3 Security](LPIC-3-Security/home.md) | 303-300 | Enterprise-безопасность (криптография, MAC, сети, аудит) |
 
 ## Документация проекта
 

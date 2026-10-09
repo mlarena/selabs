@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)
+[Оглавление](home.md)
 
 
 **Практическая работа №1: Базовая загрузка системы (uptime, load average)**
@@ -122,4 +122,4 @@ fi
 Cron: `*/10 * * * * /path/to/monitor.sh`.     
 Логи помогают анализировать историю проблем.    
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)
+[Оглавление](home.md)

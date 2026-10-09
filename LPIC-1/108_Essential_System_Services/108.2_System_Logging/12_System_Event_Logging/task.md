@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)
+[Оглавление](home.md)
 
 **Практическая работа №1: Работа с журналом systemd (journalctl)**
 
@@ -113,4 +113,4 @@ du -sh /var/log | awk '{print "Логи занимают: "$1}'
 Удаление логов требует осторожности — некоторые логи важны для аудита.           
 
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)
+[Оглавление](home.md)

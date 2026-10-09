@@ -1,4 +1,4 @@
-[Оглавление](LPIC-3-Security/home.md)
+[Оглавление](LPIC-3-Securityhome.md)
 
 **Практическая работа №1: Фильтрация через iptables**
 

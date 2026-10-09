@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)      
+[Оглавление](home.md)      
 
 **Практическая работа №1: Базовые переменные окружения**
 
@@ -122,4 +122,4 @@ bash -c 'echo $LOCAL_VAR'          # Не выведет ничего (пере�
 Экспортированные переменные наследуются всеми дочерними процессами.      
 
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)    
+[Оглавление](home.md)    

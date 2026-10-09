@@ -1,4 +1,4 @@
-[Оглавление](LPIC-3-Mixed-Environments/home.md)
+[Оглавление](LPIC-3-Mixed-Environmentshome.md)
 
 # Экзаменационные боевые задачи — Тема 301: Samba Basics
 

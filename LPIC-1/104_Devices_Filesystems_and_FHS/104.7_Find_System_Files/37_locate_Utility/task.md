@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)
+[Оглавление](home.md)
 
 
 **Практическая работа №1: Базовое использование locate**
@@ -122,4 +122,4 @@ ls -la /var/lib/mlocate/mlocate.db  # Дата последнего обновл
 
 
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)
+[Оглавление](home.md)

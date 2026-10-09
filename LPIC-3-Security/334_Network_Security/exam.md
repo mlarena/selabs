@@ -1,4 +1,4 @@
-[Оглавление](LPIC-3-Security/home.md)
+[Оглавление](LPIC-3-Securityhome.md)
 
 # Экзаменационные боевые задачи — Тема 334: Network Security
 

@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)
+[Оглавление](home.md)
 
 **Практическая работа №1: Шифрование съемного носителя (USB) с LUKS**
 
@@ -126,4 +126,4 @@ done
 Резервные копии должны храниться отдельно от зашифрованных данных и быть защищены.    
 
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)
+[Оглавление](home.md)

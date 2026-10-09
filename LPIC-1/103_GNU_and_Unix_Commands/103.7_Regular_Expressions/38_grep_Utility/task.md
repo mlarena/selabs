@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)
+[Оглавление](home.md)
 
 
 **Практическая работа №1: Базовый поиск и фильтрация**
@@ -168,4 +168,4 @@ echo "error: disk full" | grep -o "disk.*"
 Эти опции полезны для анализа логов.
 
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)
+[Оглавление](home.md)

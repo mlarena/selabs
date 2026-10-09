@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)     
+[Оглавление](home.md)     
 
 **Практическая работа №1: Базовый скрипт с переменными и вводом**    
 
@@ -219,4 +219,4 @@ echo "Файлов в /etc: $(count_files /etc)" >> $LOG
 Логирование помогает отслеживать выполнение скрипта.
 
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)     
+[Оглавление](home.md)     

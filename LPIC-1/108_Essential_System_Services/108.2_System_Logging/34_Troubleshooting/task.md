@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md) 
+[Оглавление](home.md) 
 
 **Практическая работа №1: Диагностика проблем с загрузкой системы**     
 
@@ -327,4 +327,4 @@ sudo systemctl start service_name
 `systemctl edit` создает оверрайд конфигурации.      
 Переустановка пакета может восстановить поврежденные файлы службы.     
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md) 
+[Оглавление](home.md) 

@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)    
+[Оглавление](home.md)    
 
 **Практическая работа №1: Поиск и фильтрация текста (grep)**
 
@@ -107,4 +107,4 @@ awk '$NF > 400' access.log                                     # 6. Сравне
 `END` выполняет команды после обработки всех строк. Условия без действия выводят всю строку.
 
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)
+[Оглавление](home.md)

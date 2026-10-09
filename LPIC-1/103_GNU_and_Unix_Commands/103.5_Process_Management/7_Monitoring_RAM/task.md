@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)
+[Оглавление](home.md)
 
 
 **Практическая работа №1: Базовый мониторинг оперативной памяти**
@@ -122,4 +122,4 @@ cat /proc/meminfo | grep -E "(Cached|Buffers|Slab)"  # Детальная инф
 `preload` предзагружает часто используемые библиотеки.      
 
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)
+[Оглавление](home.md)

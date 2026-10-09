@@ -1,4 +1,4 @@
-[Оглавление](LPIC-2/home.md)
+[Оглавление](LPIC-2home.md)
 
 # Экзаменационные боевые задачи — Тема 205: Networking Configuration
 

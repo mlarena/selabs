@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)     
+[Оглавление](home.md)     
 
 **Практическая работа №1: Анализ времени загрузки системы**     
 
@@ -113,4 +113,4 @@ sudo mount -o remount,rw /           # 5. Перемонтирование ко�
 Восстановление пароля требует физического доступа к машине.     
 
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)     
+[Оглавление](home.md)     

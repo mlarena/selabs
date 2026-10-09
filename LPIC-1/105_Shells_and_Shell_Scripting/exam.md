@@ -1,4 +1,4 @@
-[Оглавление](LPIC-1/home.md)
+[Оглавление](LPIC-1home.md)
 
 # Экзаменационные боевые задачи — Тема 105: Shells and Shell Scripting
 

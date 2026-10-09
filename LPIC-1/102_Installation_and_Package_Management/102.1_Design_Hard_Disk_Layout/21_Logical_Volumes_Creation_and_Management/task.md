@@ -1,4 +1,4 @@
-[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)
+[Оглавление](home.md)
 
 **Практическая работа №1: Создание LVM и базовых томов**     
 
@@ -121,4 +121,4 @@ sudo vgcfgbackup vg_data             # 6. Резервное копирован�
 `-an` деактивирует.      
 Резервные копии важны для восстановления.     
 
-[Оглавление](https://gitflic.ru/project/ml/selabs/blobhome.md)
+[Оглавление](home.md)

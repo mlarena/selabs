@@ -14,9 +14,9 @@
 ## Документация проекта
 
 - [О проекте и как учиться](README.md)
-- [Карта соответствия целям LPI](?file=docs%2Flpi-map.md)
-- [План развития (roadmap)](?file=docs%2Froadmap.md)
-- [Формат экзаменов LPI](?file=docs%2Fexam-format.md)
+- [Карта соответствия целям LPI](docs/lpi-map.md)
+- [План развития (roadmap)](docs/roadmap.md)
+- [Формат экзаменов LPI](docs/exam-format.md)
 
 ## Как устроен каждый уровень
 

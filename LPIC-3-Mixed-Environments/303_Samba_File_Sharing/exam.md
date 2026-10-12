@@ -1,4 +1,4 @@
-[Оглавление](LPIC-3-Mixed-Environmentshome.md)
+﻿[Оглавление](../home.md)
 
 # Экзаменационные боевые задачи — Тема 303: Samba File Sharing
 

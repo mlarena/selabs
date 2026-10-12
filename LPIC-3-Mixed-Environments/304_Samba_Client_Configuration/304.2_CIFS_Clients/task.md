@@ -1,4 +1,4 @@
-[Оглавление](LPIC-3-Mixed-Environmentshome.md)
+﻿[Оглавление](../home.md)
 
 **Практическая работа №1: Доступ к CIFS-ресурсу из Linux**
 

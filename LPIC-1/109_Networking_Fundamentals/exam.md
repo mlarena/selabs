@@ -1,4 +1,4 @@
-[Оглавление](LPIC-1home.md)
+﻿[Оглавление](../home.md)
 
 # Экзаменационные боевые задачи — Тема 109: Networking Fundamentals
 

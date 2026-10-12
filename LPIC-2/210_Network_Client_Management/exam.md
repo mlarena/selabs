@@ -1,4 +1,4 @@
-[Оглавление](LPIC-2home.md)
+﻿[Оглавление](../home.md)
 
 # Экзаменационные боевые задачи — Тема 210: Network Client Management
 

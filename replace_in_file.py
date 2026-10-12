@@ -1,8 +1,12 @@
 import os
 
 # НАСТРОЙКИ
-old_text = '1_task_jun'
-new_text = 'task'
+replacements = [
+    ('[Оглавление](home.md)', '[Оглавление](../home.md)'),
+    ('[Оглавление](LPIC-1home.md)', '[Оглавление](../home.md)'),
+    ('[Оглавление](LPIC-2home.md)', '[Оглавление](../home.md)'),
+    ('[Оглавление](LPIC-3-Securityhome.md)', '[Оглавление](../home.md)'),
+]
 root_dir = '.'
 
 current_script = os.path.abspath(__file__)

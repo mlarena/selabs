@@ -1,4 +1,5 @@
-﻿[Оглавление](../home.md)
+﻿
+---
 
 **Практическая работа №1: Файловая конфигурация smb.conf**
 
@@ -93,3 +94,27 @@ testparm -sv | grep -iE "log level|server role"
 ```
 **Пояснения:**
 `log level` задаёт детализацию логов (`/var/log/samba/`). Windows-инструменты: RSAT (оснастки), ADSI Edit, LDP, Regedit, MMC — для управления AD и реестром Samba. Отладку ведут от логов к конфигурации.
+---
+
+**Практическая работа №5: Безопасность через include-файлы**
+
+**Задание:**
+1. Создайте `/etc/samba/conf.d/security.conf`.
+2. Подключите через `include = /etc/samba/conf.d/security.conf`.
+3. Задайте `restrict anonymous = 2`, `server min protocol = SMB3_11`.
+4. Проверьте конфигурацию и примените.
+
+**Решение и пояснения:**
+```bash
+sudo mkdir -p /etc/samba/conf.d
+sudo tee /etc/samba/conf.d/security.conf <<'EOF'
+restrict anonymous = 2
+map to guest = never
+server min protocol = SMB3_11
+server signing = required
+EOF
+testparm -sv | grep -E "restrict anonymous|server min protocol"
+sudo systemctl restart smbd
+```
+**Пояснения:**
+`include` позволяет модульно управлять конфигурацией. `restrict anonymous = 2` запрещает анонимный доступ.

@@ -1,4 +1,5 @@
-﻿[Оглавление](../home.md)
+﻿
+---
 
 **Практическая работа №1: Управление службами и мониторинг демонов**
 
@@ -82,3 +83,28 @@ sudo samba-tool drs showrepl
 ```
 **Пояснения:**
 `samba-tool dbcheck` проверяет и исправляет базу AD. `drs showrepl` показывает состояние репликации. Регулярное обслуживание: бэкапы, проверка БД, мониторинг репликации, обновление Samba.
+---
+
+**Практическая работа №5: Автоматизация обслуживания**
+
+**Задание:**
+1. Напишите скрипт резервного копирования `smb.conf` и TDB-файлов.
+2. Настройте cron-задачу на ежедневное выполнение в 02:00.
+3. Настройте ротацию логов через logrotate.
+4. Проверьте работу скрипта.
+
+**Решение и пояснения:**
+```bash
+sudo tee /usr/local/bin/samba_backup.sh <<'SCRIPT'
+#!/bin/bash
+BACKUP_DIR="/var/backups/samba/$(date +%Y%m%d)"
+mkdir -p "$BACKUP_DIR"
+cp /etc/samba/smb.conf "$BACKUP_DIR/"
+cp /var/lib/samba/*.tdb "$BACKUP_DIR/" 2>/dev/null
+find /var/backups/samba -maxdepth 1 -mtime +7 -exec rm -rf {} \;
+SCRIPT
+sudo chmod +x /usr/local/bin/samba_backup.sh
+# crontab -e: 0 2 * * * /usr/local/bin/samba_backup.sh
+```
+**Пояснения:**
+Резервное копирование TDB-файлов критично для AD DC.

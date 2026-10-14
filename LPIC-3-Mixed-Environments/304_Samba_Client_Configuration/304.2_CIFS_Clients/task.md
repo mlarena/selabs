@@ -1,4 +1,5 @@
-﻿[Оглавление](../home.md)
+﻿
+---
 
 **Практическая работа №1: Доступ к CIFS-ресурсу из Linux**
 
@@ -88,3 +89,24 @@ smbget smb://server/docs/file.txt         # 4. Загрузка
 ```
 **Пояснения:**
 `getcifsacl`/`setcifsacl` управляют Windows-ACL удалённых ресурсов. `smbcquotas` — квотами. `smbget`/`smbtar` — скачивание. Права CIFS отличаются от POSIX, поэтому важна согласованность с сервером.
+---
+
+**Практическая работа №5: Mount CIFS с шифрованием**
+
+**Задание:**
+1. Смонтируйте CIFS-ресурс с `seal`.
+2. Используйте `cred` файл.
+3. Настройте `nofail` в fstab.
+
+**Решение и пояснения:**
+```bash
+sudo tee /etc/samba/creds.txt <<'EOF'
+username=user1
+password=pass1
+EOF
+sudo chmod 600 /etc/samba/creds.txt
+sudo mount -t cifs //dc1/lab /mnt/lab \
+  -o credentials=/etc/samba/creds.txt,seal,uid=1001,gid=1001,nofail
+```
+**Пояснения:**
+`seal` включает шифрование SMB3 (AES-128-CCM).

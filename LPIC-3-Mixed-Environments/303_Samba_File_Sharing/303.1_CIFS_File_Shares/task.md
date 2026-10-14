@@ -1,4 +1,5 @@
-﻿[Оглавление](../home.md)
+﻿
+---
 
 **Практическая работа №1: Создание CIFS-ресурса**
 
@@ -92,3 +93,24 @@ rsync -aAXv /oldshare/ /srv/samba/docs/        # Миграция данных
 ```
 **Пояснения:**
 Миграция: инвентаризация, перенос данных (`rsync`), проверка прав/ACL, переключение клиентов, мониторинг. Квоты (`smbcquotas`) ограничивают объём. VFS `full_audit` логирует доступ для аудита.
+---
+
+**Практическая работа №5: Аудит доступа к CIFS-ресурсам**
+
+**Задание:**
+1. Включите `full_audit` VFS-модуль для ресурса `data`.
+2. Смоделируйте действия пользователей и проверьте логи.
+3. Настройте алерт при массовом удалении файлов.
+
+**Решение и пояснения:**
+```bash
+# smb.conf в [data]:
+# vfs objects = full_audit
+# full_audit:prefix = "AUDIT|%U|%I|%m"
+# full_audit:success = open write unlink rename mkdir rmdir
+# full_audit:facility = local7
+sudo journalctl -t AUDIT --since "5 min ago"
+grep -c "unlink" /var/log/samba/log.smbd | awk '$1>50 {print "ALERT: mass delete"}'
+```
+**Пояснения:**
+`full_audit` логирует операции с файлами: кто, откуда, что сделал.

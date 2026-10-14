@@ -1,4 +1,5 @@
-﻿[Оглавление](../home.md)
+﻿
+---
 
 **Практическая работа №1: Управление пользователями и группами AD**
 
@@ -83,3 +84,24 @@ sudo samba-tool domain exportkeytab --help
 ```
 **Пояснения:**
 RFC2307-атрибуты (`uidNumber`, `gidNumber`, `homeDirectory`) позволяют Linux-клиентам сопоставлять AD-пользователей с Unix-идентификаторами. SID — уникальный идентификатор объекта, UPN — имя входа вида `user@realm`.
+---
+
+**Практическая работа №5: Массовое управление пользователями AD**
+
+**Задание:**
+1. Создайте пользователей из CSV через `samba-tool user create`.
+2. Добавьте в группу через `samba-tool group addmembers`.
+3. Установите срок действия пароля 90 дней.
+4. Экспортируйте список пользователей.
+
+**Решение и пояснения:**
+```bash
+while IFS=, read -r user pass name; do
+    samba-tool user create "$user" "$pass" --given-name="$name"
+done < users.csv
+samba-tool group addmembers Developers "$(awk -F, '{print $1}' users.csv | paste -sd,)"
+samba-tool domain passwordsettings set --max-password-age=90
+samba-tool user list > users_list.txt
+```
+**Пояснения:**
+`samba-tool` позволяет скриптовать все операции AD.

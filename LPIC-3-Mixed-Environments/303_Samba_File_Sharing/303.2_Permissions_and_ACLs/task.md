@@ -1,4 +1,5 @@
-﻿[Оглавление](../home.md)
+﻿
+---
 
 **Практическая работа №1: POSIX ACL в Linux**
 
@@ -86,3 +87,28 @@ smbclient //localhost/docs -U user1 -c "smbstatus"
 ```
 **Пояснения:**
 Подпись SMB (signing) обеспечивает целостность и аутентификацию сообщений, шифрование (`smb encrypt`) скрывает содержимое. `required` обязывает использовать шифрование, иначе соединение отклоняется.
+---
+
+**Практическая работа №5: Скрипт массового управления ACL**
+
+**Задание:**
+1. Напишите скрипт применения стандартного набора ACL.
+2. Установите default ACL для наследования.
+3. Проверьте результат через `getfacl`.
+
+**Решение и пояснения:**
+```bash
+sudo tee /usr/local/bin/set_acl.sh <<'SCRIPT'
+#!/bin/bash
+DIR="$1"
+chmod 750 "$DIR"
+setfacl -m u::rwx,g::rx,o::--- "$DIR"
+setfacl -m u:audit:rx "$DIR"
+setfacl -d -m u::rwx,g::rx,o::--- "$DIR"
+getfacl "$DIR"
+SCRIPT
+sudo chmod +x /usr/local/bin/set_acl.sh
+sudo /usr/local/bin/set_acl.sh /srv/samba/projects
+```
+**Пояснения:**
+`setfacl -m` устанавливает ACL, `-d` — default ACL (наследуется новыми файлами).

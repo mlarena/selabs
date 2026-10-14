@@ -1,4 +1,5 @@
-﻿[Оглавление](../home.md)
+﻿
+---
 
 **Практическая работа №1: Настройка доверия с AD**
 
@@ -83,3 +84,21 @@ sudo journalctl -u sssd -n 50
 ```
 **Пояснения:**
 Cross-forest trust — предпочтительный способ интеграции: домены остаются независимыми, доступ обеспечивается через Kerberos. PAC передаёт идентификацию и группы пользователя AD. Репликационная интеграция ограничена и используется редко.
+---
+
+**Практическая работа №5: Диагностика доверия FreeIPA и AD**
+
+**Задание:**
+1. Проверьте статус доверия через `ipa trust-show`.
+2. Проверьте DNS SRV-записи.
+3. Выполните `net rpc testjoin`.
+
+**Решение и пояснения:**
+```bash
+ipa trust-show lab.example.com --all
+dig +short _ldap._tcp.lab.example.com SRV
+net rpc testjoin -S dc1.lab.example.com
+sudo journalctl -u sssd --since "10 min ago" | grep -i "trust"
+```
+**Пояснения:**
+DNS SRV-записи критичны для поиска KDC.

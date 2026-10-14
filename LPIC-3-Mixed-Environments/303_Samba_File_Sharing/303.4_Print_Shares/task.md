@@ -1,4 +1,5 @@
-﻿[Оглавление](../home.md)
+﻿
+---
 
 **Практическая работа №1: Печать в Samba и CUPS**
 
@@ -82,3 +83,21 @@ rpcclient -U admin%pass //localhost -c "setdriver" 2>/dev/null
 ```
 **Пояснения:**
 Печать диагностируют через CUPS (`lpstat`, `/var/log/cups/`) и логи Samba. Право `SePrintOperatorPrivilege` позволяет управлять драйверами/очередью. Типовые проблемы: неверные драйверы, права на `[print$]`, недоступность CUPS, `spoolssd`.
+---
+
+**Практическая работа №5: Мониторинг очереди печати**
+
+**Задание:**
+1. Просмотрите очередь через `lpstat`.
+2. Проверьте логи CUPS при ошибке.
+3. Настройте алерт при зависании очереди.
+
+**Решение и пояснения:**
+```bash
+lpstat -t
+lp -d printer1 -n 3 test.ps
+sudo tail -50 /var/log/cups/error_log
+lpstat -o | awk '$4=="processing-stopped" {print "STUCK:", $1}'
+```
+**Пояснения:**
+`lpstat -t` показывает все очереди и задания.

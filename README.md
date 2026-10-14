@@ -4,7 +4,7 @@
 
 ## Цели проекта
 
-1. Дать структурированную программу обучения по уровням LPIC-1, LPIC-2, LPIC-3 Mixed Environments и LPIC-3 Security.
+1. Дать структурированную программу обучения по уровням LPIC-1, LPIC-2, LPIC-3 Mixed Environments, LPIC-3 Security, LPIC-3 High Availability и LPIC-3 Virtualization.
 2. Закрепить теорию практическими работами с разбором решений.
 3. Подготовить к реальным экзаменационным заданиям через «боевые задачи» (`exam.md`).
 
@@ -26,6 +26,8 @@ selabs/
 ├── LPIC-2/                          # уровень LPIC-2 (201-450, 202-450)
 ├── LPIC-3-Mixed-Environments/       # уровень LPIC-3 (300-300)
 ├── LPIC-3-Security/                 # уровень LPIC-3 (303-300)
+├── LPIC-3-High-Availability-and-Storage-Clusters/  # уровень LPIC-3 (306-300)
+├── LPIC-3-Virtualization-and-Containerization/     # уровень LPIC-3 (305-300)
 └── resources/                       # вспомогательные материалы и черновики
 ```
 

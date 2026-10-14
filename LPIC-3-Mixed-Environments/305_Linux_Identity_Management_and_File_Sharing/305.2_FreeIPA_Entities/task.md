@@ -1,4 +1,5 @@
-﻿[Оглавление](../home.md)
+﻿
+---
 
 **Практическая работа №1: Управление пользователями и группами**
 
@@ -86,3 +87,23 @@ ipa sudorule-add allow_admin --hostcat=all --cmdcat=all
 ```
 **Пояснения:**
 ID views позволяют переопределять POSIX-идентификаторы (UID/GID, домашний каталог) для пользователей AD/LDAP на конкретных хостах. FreeIPA интегрируется с sudo, autofs, SSH-ключами и SELinux.
+---
+
+**Практическая работа №5: Правила sudo в FreeIPA**
+
+**Задание:**
+1. Создайте sudo-правило для группы `sysadmins`.
+2. Ограничьте хостами из `production`.
+3. Проверьте на клиенте.
+
+**Решение и пояснения:**
+```bash
+ipa sudorule-add admins --desc="Full access for sysadmins"
+ipa sudorule-add-option admins --sudooption '!authenticate'
+ipa sudorule-add-user admins --groups=sysadmins
+ipa sudorule-add-host admins --hostgroups=production
+ipa sudorule-enable admins
+sudo -l
+```
+**Пояснения:**
+FreeIPA хранит sudo-правила в LDAP, клиенты получают их через sssd.

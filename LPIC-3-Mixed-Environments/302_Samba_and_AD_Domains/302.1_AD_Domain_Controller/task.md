@@ -1,4 +1,5 @@
-﻿[Оглавление](../home.md)
+﻿
+---
 
 **Практическая работа №1: Подготовка и установка AD DC**
 
@@ -86,3 +87,26 @@ ls /var/lib/samba/sysvol/
 ```
 **Пояснения:**
 Функциональные уровни определяют доступные возможности AD. Доверия (trust) связывают домены/леса для аутентификации. SYSVOL (`/var/lib/samba/sysvol`) хранит GPO и скрипты, реплицируемые между DC.
+---
+
+**Практическая работа №5: Восстановление AD DC из бэкапа**
+
+**Задание:**
+1. Остановите службы Samba AD DC.
+2. Проверьте целостность базы `samba-tool dbcheck`.
+3. Восстановите из резервной копии.
+4. Запустите службы и проверьте аутентификацию.
+5. Синхронизируйте с другими DC.
+
+**Решение и пояснения:**
+```bash
+sudo systemctl stop samba-ad-dc
+sudo cp /var/lib/samba/private/sam.ldb /var/lib/samba/private/sam.ldb.bak
+sudo samba-tool dbcheck --cross-ncs
+sudo samba-tool domain backup restore --file=/var/backups/ad-2024-01-01.tar.bz2 --target-dir=/var/lib/samba/private/
+sudo systemctl start samba-ad-dc
+kinit administrator@LAB.EXAMPLE.COM && klist
+samba-tool drs showrepl
+```
+**Пояснения:**
+`samba-tool dbcheck` находит и исправляет повреждения в LDAP-базе AD.

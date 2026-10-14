@@ -1,4 +1,5 @@
-﻿[Оглавление](../home.md)
+﻿
+---
 
 **Практическая работа №1: Настройка SSSD для AD**
 
@@ -91,3 +92,28 @@ faillock --user user1
 ```
 **Пояснения:**
 Политики паролей и блокировки задают на уровне PAM (`pam_pwquality`, `pam_faillock`) и/или домена AD. SSSD передаёт часть настроек. Согласованность политик важна, чтобы локальные и доменные правила не конфликтовали.
+---
+
+**Практическая работа №5: Kerberos-конфигурация на клиенте**
+
+**Задание:**
+1. Настройте `/etc/krb5.conf` для домена LAB.EXAMPLE.COM.
+2. Получите TGT через `kinit`.
+3. Проверьте билет `klist`.
+
+**Решение и пояснения:**
+```bash
+sudo tee /etc/krb5.conf <<'EOF'
+[libdefaults]
+    default_realm = LAB.EXAMPLE.COM
+    dns_lookup_kdc = true
+[realms]
+    LAB.EXAMPLE.COM = {
+        kdc = dc1.lab.example.com
+    }
+EOF
+kinit user1@LAB.EXAMPLE.COM
+klist
+```
+**Пояснения:**
+`dns_lookup_kdc = true` позволяет находить KDC через DNS SRV-записи AD.

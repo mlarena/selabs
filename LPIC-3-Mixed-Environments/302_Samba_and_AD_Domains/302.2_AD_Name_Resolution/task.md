@@ -1,4 +1,5 @@
-﻿[Оглавление](../home.md)
+﻿
+---
 
 **Практическая работа №1: Внутренний DNS Samba**
 
@@ -80,3 +81,23 @@ nmblookup -A 127.0.0.1 2>/dev/null || echo "nmbd не используется"
 ```
 **Пояснения:**
 BIND9 DLZ позволяет хранить зоны AD в LDAP (используется крупными развёртываниями вместо внутреннего DNS Samba). NetBIOS/WINS — устаревший механизм разрешения имён Windows; в современных AD его заменяет DNS.
+---
+
+**Практическая работа №5: DNS-форвардинг и DNSSEC**
+
+**Задание:**
+1. Настройте DNS-форвардинг на `8.8.8.8`.
+2. Настройте обратную зону для подсети AD.
+3. Проверьте рекурсивные запросы через `dig`.
+4. Включите DNSSEC валидацию.
+
+**Решение и пояснения:**
+```bash
+# /etc/samba/smb.conf [global]: dns forwarder = 8.8.8.8
+sudo systemctl restart samba-ad-dc
+dig @localhost external.lab A +short
+dig @localhost -x 192.168.1.10 +short
+delv lab.example.com A +cd
+```
+**Пояснения:**
+`dns forwarder` перенаправляет внешние запросы. `delv` валидирует DNSSEC-цепочки.

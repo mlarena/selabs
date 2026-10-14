@@ -1,4 +1,30 @@
-[Оглавление](../../home.md)     
+---
+
+**Практическая работа №5: Настройка и аудит SELinux-политик**
+
+**Задание:**
+1. Просмотрите все модули SELinux через `semodule -l`.
+2. Создайте пользовательский модуль политики через `audit2allow`.
+3. Включите/отключите модуль и проверьте результат.
+4. Настройте булевые переключатели SELinux через `getsebool`/`setsebool`.
+5. Проверьте логирование нарушений через `ausearch`.
+
+**Решение и пояснения:**
+```bash
+semodule -l | head -20                        # 1. Список модулей
+sudo grep "denied" /var/log/audit/audit.log | audit2allow -M custom_policy  # 2. Создание модуля
+sudo semodule -i custom_policy.pp             # 3. Установка модуля
+sudo semodule -r custom_policy                # 3. Удаление модуля
+getsebool -a | grep http                      # 4. Булевые переключатели
+setsebool -P httpd_enable_homedirs on         # 4. Включение булева
+sudo ausearch -m avc -ts recent              # 5. Поиск нарушений AVC
+```
+**Пояснения:**
+`semodule` управляет модулями политики SELinux. `audit2allow` генерирует модули из логов нарушений. Булевые переключатели (`getsebool`/`setsebool`) позволяют гибко настраивать поведение без создания модулей. `ausearch -m avc` ищет нарушения мандатного контроля доступа.
+
+---
+
+[Оглавление](../../home.md)
 
 **Практическая работа №1: Установка и базовая настройка SELinux**     
 

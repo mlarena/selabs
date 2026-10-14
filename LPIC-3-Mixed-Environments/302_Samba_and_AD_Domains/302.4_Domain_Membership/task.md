@@ -1,4 +1,5 @@
-﻿[Оглавление](../home.md)
+﻿
+---
 
 **Практическая работа №1: Присоединение Linux к AD (member server)**
 
@@ -90,3 +91,21 @@ sudo systemctl restart smbd
 ```
 **Пояснения:**
 `wbinfo -t` проверяет доверие, `klist` — Kerberos-билеты. Ресурсы могут разрешать доступ AD-группам. Типовые проблемы: рассинхронизация времени, неверный DNS, ошибки ID mapping, отсутствие `winbind`.
+---
+
+**Практическая работа №5: Настройка gMSA**
+
+**Задание:**
+1. На клиенте настройте sssd для работы с gMSA.
+2. Настройте службу для использования gMSA.
+3. Проверьте автоматическую ротацию пароля.
+
+**Решение и пояснения:**
+```bash
+sudo apt install -y libnss-sss libpam-sss adcli realmd
+sudo realm join LAB.EXAMPLE.COM -U administrator
+sudo systemctl restart sssd
+id sqlsvc@lab.example.com
+```
+**Пояснения:**
+gMSA — учётная запись службы с автоматически ротируемым паролем в AD.
